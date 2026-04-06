@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+/* ── Custom Theme ── */
+@theme {
+  --color-navy: #1e2a4a;
+  --color-navy-light: #2a3a5c;
+  --color-navy-dark: #151e36;
+  --color-equivalent: #16a34a;
+  --color-equivalent-light: #dcfce7;
+  --color-partial: #d97706;
+  --color-partial-light: #fef3c7;
+  --color-gap: #dc2626;
+  --color-gap-light: #fee2e2;
+  --color-iso: #3b82f6;
+  --color-iso-light: #dbeafe;
+  --color-soc2: #8b5cf6;
+  --color-soc2-light: #ede9fe;
+  --color-gdpr: #16a34a;
+  --color-gdpr-light: #dcfce7;
+  --color-surface: #f8fafc;
+  --color-border: #e2e8f0;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ── Base Styles ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ── Animations ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out forwards;
+}
+
+/* ── Card Hover ── */
+.card-hover {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.card-hover:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ── Table ── */
+.mapping-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.mapping-table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  background-color: #f8fafc;
+  border-bottom: 2px solid #e2e8f0;
+}
+.mapping-table td {
+  padding: 12px 16px;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: top;
+}
+.mapping-table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.mapping-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* ── Score Inline Bar ── */
+.score-bar-bg {
+  width: 60px;
+  height: 6px;
+  background-color: #e2e8f0;
+  border-radius: 3px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+.score-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}

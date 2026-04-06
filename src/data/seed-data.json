@@ -1,0 +1,838 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "created": "2024",
+    "note": "All control descriptions are developer-created simplified summaries based on publicly available framework documentation, study materials, and blog references. They are not copied from official ISO, AICPA, or EU regulatory text. GDPR content is derived from public law. Mappings represent conceptual alignment for educational and portfolio purposes only.",
+    "scoring_guide": {
+      "equivalent": "80–100: Controls address the same objective, scope, and intent with negligible gaps",
+      "partial": "40–79: Controls share significant overlap but differ in scope, depth, or specific requirements",
+      "gap": "0–39: The source control has no meaningful counterpart in the target framework for this domain"
+    }
+  },
+
+  "frameworks": [
+    {
+      "id": "iso27001",
+      "name": "ISO 27001",
+      "version": "2013/2022 (simplified)",
+      "description": "ISO 27001 is an international standard for managing information security. It provides a systematic approach to securing sensitive company information through risk management and a set of controls across 14 domains.",
+      "total_controls": 20,
+      "domains": [
+        "Access Control",
+        "Cryptography",
+        "Physical Security",
+        "Incident Management",
+        "Supplier Relations"
+      ]
+    },
+    {
+      "id": "soc2",
+      "name": "SOC 2",
+      "version": "Trust Services Criteria 2017 (simplified)",
+      "description": "SOC 2 is a framework developed by the AICPA that defines criteria for managing customer data based on five Trust Services Criteria: Security, Availability, Processing Integrity, Confidentiality, and Privacy.",
+      "total_controls": 15,
+      "domains": [
+        "Logical Access",
+        "System Operations",
+        "Risk Mitigation",
+        "Availability"
+      ]
+    },
+    {
+      "id": "gdpr",
+      "name": "GDPR",
+      "version": "General Data Protection Regulation (EU) 2016/679",
+      "description": "The GDPR is a European Union regulation governing the collection, processing, and storage of personal data. It applies to any organization that handles personal data of EU residents, regardless of where the organization is based.",
+      "total_controls": 10,
+      "domains": [
+        "Data Principles",
+        "Lawful Basis",
+        "Transparency",
+        "Individual Rights",
+        "Privacy by Design",
+        "Security",
+        "Breach Notification",
+        "Risk Assessment"
+      ]
+    }
+  ],
+
+  "controls": [
+    {
+      "id": "iso-a9-1",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Access Control",
+      "code": "A.9.1",
+      "title": "Access Control Policy",
+      "description": "Organizations must define and document a policy that governs who can access what systems and data. This policy should be reviewed regularly and aligned with business and security requirements. It forms the foundation for all other access-related controls."
+    },
+    {
+      "id": "iso-a9-2",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Access Control",
+      "code": "A.9.2",
+      "title": "User Access Management",
+      "description": "There must be a formal process for granting, modifying, and revoking user access to systems. Access should only be given based on job role and business need. Joiners, movers, and leavers must be handled in a timely and controlled way."
+    },
+    {
+      "id": "iso-a9-3",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Access Control",
+      "code": "A.9.3",
+      "title": "User Responsibilities",
+      "description": "Users are responsible for keeping their authentication credentials secure and confidential. They must not share passwords or leave sessions unattended in sensitive environments. Organizations should train users on their obligations around access security."
+    },
+    {
+      "id": "iso-a9-4",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Access Control",
+      "code": "A.9.4",
+      "title": "System and Application Access Control",
+      "description": "Access to systems and applications must be restricted based on defined access control policies. Secure log-on procedures should be enforced, including multi-factor authentication where appropriate. Systems should automatically lock or log out after periods of inactivity."
+    },
+    {
+      "id": "iso-a9-5",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Access Control",
+      "code": "A.9.5",
+      "title": "Privileged Access Management",
+      "description": "Privileged and administrator accounts must be tightly controlled and only granted to users who genuinely need them. Use of privileged access should be logged and monitored closely. Privileged accounts should not be used for routine day-to-day tasks."
+    },
+    {
+      "id": "iso-a10-1",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Cryptography",
+      "code": "A.10.1",
+      "title": "Cryptographic Controls Policy",
+      "description": "Organizations must have a policy governing the use of encryption to protect sensitive information. The policy should specify which types of data require encryption and which cryptographic standards are acceptable. Outdated or weak algorithms must be identified and phased out."
+    },
+    {
+      "id": "iso-a10-2",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Cryptography",
+      "code": "A.10.2",
+      "title": "Key Management",
+      "description": "Encryption keys must be managed throughout their full lifecycle, including generation, storage, rotation, and destruction. Keys should be stored securely and access to them tightly restricted. Loss or compromise of encryption keys can render protected data unrecoverable or exposed."
+    },
+    {
+      "id": "iso-a11-1",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Physical Security",
+      "code": "A.11.1",
+      "title": "Physical Security Perimeter",
+      "description": "Organizations must define and enforce physical security boundaries around areas that contain sensitive systems or information. Entry to secure areas should require authentication such as keycards, PINs, or biometrics. Physical perimeters must be designed to prevent unauthorized access."
+    },
+    {
+      "id": "iso-a11-2",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Physical Security",
+      "code": "A.11.2",
+      "title": "Physical Entry Controls",
+      "description": "Access to physically secure areas must be logged and only granted to authorized individuals. Visitors should be accompanied and their access tracked with a formal visitor log. Physical access rights should be reviewed and revoked when no longer needed."
+    },
+    {
+      "id": "iso-a11-3",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Physical Security",
+      "code": "A.11.3",
+      "title": "Equipment Security",
+      "description": "Hardware and equipment must be protected from physical threats such as theft, damage, or tampering. Equipment should be positioned and secured to minimize exposure to environmental hazards. Unattended equipment in public or shared spaces poses a particular risk that must be managed."
+    },
+    {
+      "id": "iso-a11-4",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Physical Security",
+      "code": "A.11.4",
+      "title": "Clear Desk and Clear Screen",
+      "description": "Sensitive documents and storage media must not be left unattended on desks or in open areas. Computer screens should be locked when a user steps away to prevent unauthorized viewing. This reduces the risk of information being seen or taken by unauthorized individuals."
+    },
+    {
+      "id": "iso-a16-1",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Incident Management",
+      "code": "A.16.1",
+      "title": "Incident Management Responsibilities",
+      "description": "Organizations must establish clear roles and responsibilities for managing information security incidents. A defined process should exist for detecting, reporting, and escalating incidents. All staff should know how and where to report suspected security events."
+    },
+    {
+      "id": "iso-a16-2",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Incident Management",
+      "code": "A.16.2",
+      "title": "Reporting Security Events",
+      "description": "Employees and contractors must report any suspected or actual security events through established channels as quickly as possible. Early reporting enables faster containment and reduces the overall impact of incidents. Organizations should make reporting easy and avoid creating a blame culture."
+    },
+    {
+      "id": "iso-a16-3",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Incident Management",
+      "code": "A.16.3",
+      "title": "Incident Response and Recovery",
+      "description": "When a security incident occurs, it must be assessed, contained, and resolved in a structured way. Evidence should be preserved appropriately, especially if legal or disciplinary action may follow. After resolution, a post-incident review should identify lessons learned to improve future response."
+    },
+    {
+      "id": "iso-a16-4",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Incident Management",
+      "code": "A.16.4",
+      "title": "Collection of Evidence",
+      "description": "Organizations must ensure that evidence related to security incidents is collected and preserved in a forensically sound manner. Evidence handling procedures should follow legal and regulatory requirements to ensure admissibility. Poor evidence handling can undermine investigations and legal proceedings."
+    },
+    {
+      "id": "iso-a15-1",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Supplier Relations",
+      "code": "A.15.1",
+      "title": "Supplier Security Policy",
+      "description": "Organizations must define security requirements that suppliers and third parties must meet before being given access to systems or data. These requirements should be formally documented and agreed upon before any engagement begins. Supplier risk should be assessed based on the sensitivity of the data or systems they will access."
+    },
+    {
+      "id": "iso-a15-2",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Supplier Relations",
+      "code": "A.15.2",
+      "title": "Supplier Agreements",
+      "description": "Contracts with suppliers must include specific information security obligations and requirements. Agreements should cover data handling, confidentiality, breach notification, and the right to audit. Security terms must be reviewed when contracts are renewed or when supplier relationships change significantly."
+    },
+    {
+      "id": "iso-a15-3",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Supplier Relations",
+      "code": "A.15.3",
+      "title": "Supplier Service Monitoring",
+      "description": "Organizations should regularly monitor and review the security performance of their suppliers. This includes reviewing audit reports, certifications, or conducting assessments where necessary. Changes in a supplier's security posture should trigger a formal risk review."
+    },
+    {
+      "id": "iso-a15-4",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Supplier Relations",
+      "code": "A.15.4",
+      "title": "Managing Changes in Supplier Services",
+      "description": "Any significant changes to services provided by suppliers must be evaluated for their security impact before being accepted. This includes changes to technology, personnel, sub-contractors, or processes within the supplier's environment. Organizations must not assume that a supplier's security remains constant over time."
+    },
+    {
+      "id": "iso-a15-5",
+      "framework": "ISO 27001",
+      "framework_id": "iso27001",
+      "domain": "Supplier Relations",
+      "code": "A.15.5",
+      "title": "Sub-contractor and Supply Chain Risk",
+      "description": "Organizations must consider the security risks introduced by suppliers who themselves use sub-contractors or third-party services. Supply chain risk can propagate silently when sub-contractors have weaker security than the primary supplier. Security obligations should flow down the supply chain through contractual requirements."
+    },
+    {
+      "id": "soc2-cc6-1",
+      "framework": "SOC 2",
+      "framework_id": "soc2",
+      "domain": "Logical Access",
+      "code": "CC6.1",
+      "title": "Logical Access Security Measures",
+      "description": "The organization implements controls to protect against unauthorized access to systems and data. This includes defining and enforcing access control policies across all systems that store or process sensitive information. Controls must address both external threats and insider risk."
+    },
+    {
+      "id": "soc2-cc6-2",
+      "framework": "SOC 2",
+      "framework_id": "soc2",
+      "domain": "Logical Access",
+      "code": "CC6.2",
+      "title": "User Registration and Access Provisioning",
+      "description": "A formal process must exist for registering new users and granting them appropriate access based on their role. Access should only be provisioned after proper authorization from a designated approver. The process must also handle timely removal of access when a user changes roles or leaves the organization."
+    },
+    {
+      "id": "soc2-cc6-3",
+      "framework": "SOC 2",
+      "framework_id": "soc2",
+      "domain": "Logical Access",
+      "code": "CC6.3",
+      "title": "Role-Based Access and Least Privilege",
+      "description": "Users should only be granted the minimum level of access needed to perform their job responsibilities. Access rights must be defined by role rather than assigned arbitrarily on an individual basis. Regular reviews should confirm that access levels remain appropriate as roles change over time."
+    },
+    {
+      "id": "soc2-cc6-4",
+      "framework": "SOC 2",
+      "framework_id": "soc2",
+      "domain": "Logical Access",
+      "code": "CC6.4",
+      "title": "Physical Access Restrictions to Sensitive Systems",
+      "description": "Physical access to systems and infrastructure that process or store sensitive data must be restricted to authorized personnel only. Entry points to data centers or server rooms should use authentication mechanisms such as keycards or biometrics. Physical access logs should be maintained and reviewed regularly."
+    },
+    {
+      "id": "soc2-cc6-5",
+      "framework": "SOC 2",
+      "framework_id": "soc2",
+      "domain": "Logical Access",
+      "code": "CC6.5",
+      "title": "Access Credential Management",
+      "description": "The organization must manage credentials such as passwords, tokens, and certificates in a secure manner. Policies should enforce strong password requirements, expiration periods, and protection against reuse. Compromised or unused credentials must be revoked promptly."
+    },
+    {
+      "id": "soc2-cc6-6",
+      "framework": "SOC 2",
+      "framework_id": "soc2",
+      "domain": "Logical Access",
+      "code": "CC6.6",
+      "title": "Restriction of Access from External Networks",
+      "description": "Access to internal systems from external networks must be tightly controlled and monitored. Controls such as firewalls, VPNs, and multi-factor authentication should be used to verify and restrict external connections. Unauthorized or unexpected external access attempts must be logged and investigated."
+    },
+    {
+      "id": "soc2-cc7-1",
+      "framework": "SOC 2",
+      "framework_id": "soc2",
+      "domain": "System Operations",
+      "code": "CC7.1",
+      "title": "Vulnerability and Configuration Management",
+      "description": "Systems must be configured securely and kept up to date with patches and security fixes. The organization should maintain a process to detect, prioritize, and remediate vulnerabilities in a timely manner. Configuration baselines should be established and deviations should trigger a review."
+    },
+    {
+      "id": "soc2-cc7-2",
+      "framework": "SOC 2",
+      "framework_id": "soc2",
+      "domain": "System Operations",
+      "code": "CC7.2",
+      "title": "Monitoring for Anomalies and Threats",
+      "description": "The organization must continuously monitor its systems for unusual activity, potential threats, and security events. Monitoring tools should generate alerts when suspicious patterns are detected. Alerts must be reviewed and acted upon in a timely fashion by responsible personnel."
+    },
+    {
+      "id": "soc2-cc7-3",
+      "framework": "SOC 2",
+      "framework_id": "soc2",
+      "domain": "System Operations",
+      "code": "CC7.3",
+      "title": "Incident Identification and Classification",
+      "description": "Security events that are detected through monitoring must be assessed and classified based on their severity and potential impact. A clear process should exist for escalating confirmed incidents to the appropriate response team. Proper classification ensures that high-severity incidents receive immediate attention."
+    },
+    {
+      "id": "soc2-cc7-4",
+      "framework": "SOC 2",
+      "framework_id": "soc2",
+      "domain": "System Operations",
+      "code": "CC7.4",
+      "title": "Incident Response and Containment",
+      "description": "When a security incident is confirmed, the organization must respond quickly to contain the threat and limit damage. Response activities should follow a documented incident response plan with defined roles and steps. After containment, affected systems must be investigated, remediated, and restored securely."
+    },
+    {
+      "id": "soc2-cc7-5",
+      "framework": "SOC 2",
+      "framework_id": "soc2",
+      "domain": "System Operations",
+      "code": "CC7.5",
+      "title": "Post-Incident Review and Disclosure",
+      "description": "After resolving a security incident, the organization should conduct a review to understand what happened and how to prevent recurrence. Findings should feed back into risk assessments, controls, and response procedures. If the incident affects customers or triggers regulatory obligations, appropriate disclosure must be made."
+    },
+    {
+      "id": "soc2-cc9-1",
+      "framework": "SOC 2",
+      "framework_id": "soc2",
+      "domain": "Risk Mitigation",
+      "code": "CC9.1",
+      "title": "Risk Identification and Assessment",
+      "description": "The organization must have a defined process for identifying and assessing risks to the confidentiality, integrity, and availability of its systems and data. Risk assessments should consider both internal and external threats, including technology changes and business context. Results should be documented and used to drive control decisions."
+    },
+    {
+      "id": "soc2-cc9-2",
+      "framework": "SOC 2",
+      "framework_id": "soc2",
+      "domain": "Risk Mitigation",
+      "code": "CC9.2",
+      "title": "Vendor and Third-Party Risk Management",
+      "description": "Risks introduced by vendors, partners, and third-party service providers must be identified and actively managed. Before onboarding, vendors should be assessed for their security posture and compliance with relevant requirements. Ongoing monitoring of vendor risk should occur throughout the relationship."
+    },
+    {
+      "id": "soc2-a1-1",
+      "framework": "SOC 2",
+      "framework_id": "soc2",
+      "domain": "Availability",
+      "code": "A1.1",
+      "title": "Availability Commitments and Capacity Management",
+      "description": "The organization must define and meet availability commitments made to customers and stakeholders. Capacity planning should ensure that systems can handle current and anticipated demand without degradation. Performance and availability metrics should be tracked and reviewed regularly."
+    },
+    {
+      "id": "soc2-a1-2",
+      "framework": "SOC 2",
+      "framework_id": "soc2",
+      "domain": "Availability",
+      "code": "A1.2",
+      "title": "Business Continuity and Disaster Recovery",
+      "description": "Plans must exist to ensure that critical systems and services can be restored in the event of a disruption or disaster. Recovery objectives such as Recovery Time Objective (RTO) and Recovery Point Objective (RPO) should be defined and tested. Backup and recovery procedures must be validated regularly to confirm they work as expected."
+    },
+    {
+      "id": "gdpr-art5-1",
+      "framework": "GDPR",
+      "framework_id": "gdpr",
+      "domain": "Data Principles",
+      "code": "Article 5(1)(a)",
+      "title": "Lawfulness, Fairness and Transparency",
+      "description": "Personal data must be processed in a way that is lawful, fair, and transparent to the individual it belongs to. People should not be misled about how their data is being used. Organizations must be open about their data processing activities and have a legitimate reason for each one."
+    },
+    {
+      "id": "gdpr-art5-2",
+      "framework": "GDPR",
+      "framework_id": "gdpr",
+      "domain": "Data Principles",
+      "code": "Article 5(1)(b-e)",
+      "title": "Purpose Limitation, Data Minimisation and Accuracy",
+      "description": "Data must only be collected for specific, clearly defined purposes and not used for anything incompatible with those purposes. Organizations should collect only the minimum amount of data necessary for the stated purpose. Data must be kept accurate and up to date, and deleted when it is no longer needed."
+    },
+    {
+      "id": "gdpr-art6-1",
+      "framework": "GDPR",
+      "framework_id": "gdpr",
+      "domain": "Lawful Basis",
+      "code": "Article 6",
+      "title": "Lawful Basis for Processing",
+      "description": "Every instance of processing personal data must be justified by one of six legal bases defined under GDPR, such as consent, contract, legal obligation, or legitimate interests. Organizations must identify and document the lawful basis for each processing activity before it begins. Processing without a valid legal basis is unlawful under GDPR."
+    },
+    {
+      "id": "gdpr-art13-1",
+      "framework": "GDPR",
+      "framework_id": "gdpr",
+      "domain": "Transparency",
+      "code": "Article 13",
+      "title": "Information to be Provided at Time of Collection",
+      "description": "When personal data is collected directly from an individual, the organization must provide clear information about who is collecting the data, why it is being collected, and how long it will be kept. Individuals must also be informed of their rights under GDPR at the point of collection. This information is typically provided through a privacy notice or policy."
+    },
+    {
+      "id": "gdpr-art17-1",
+      "framework": "GDPR",
+      "framework_id": "gdpr",
+      "domain": "Individual Rights",
+      "code": "Article 17",
+      "title": "Right to Erasure (Right to be Forgotten)",
+      "description": "Individuals have the right to request that their personal data be deleted when it is no longer necessary, when consent is withdrawn, or when the data has been unlawfully processed. Organizations must respond to erasure requests without undue delay, typically within one month. Where data has been shared with third parties, those parties must also be informed of the erasure request."
+    },
+    {
+      "id": "gdpr-art25-1",
+      "framework": "GDPR",
+      "framework_id": "gdpr",
+      "domain": "Privacy by Design",
+      "code": "Article 25",
+      "title": "Data Protection by Design and by Default",
+      "description": "Privacy protections must be built into systems and processes from the very beginning, not added on afterwards. By default, only the minimum necessary personal data should be collected and processed. Organizations must be able to demonstrate that privacy was considered at the design stage of any product or process involving personal data."
+    },
+    {
+      "id": "gdpr-art32-1",
+      "framework": "GDPR",
+      "framework_id": "gdpr",
+      "domain": "Security",
+      "code": "Article 32",
+      "title": "Security of Processing",
+      "description": "Organizations must implement appropriate technical and organizational measures to protect personal data against unauthorized access, accidental loss, destruction, or damage. The level of security should be proportionate to the risk posed by the processing activity. Examples of appropriate measures include encryption, pseudonymization, access controls, and regular security testing."
+    },
+    {
+      "id": "gdpr-art33-1",
+      "framework": "GDPR",
+      "framework_id": "gdpr",
+      "domain": "Breach Notification",
+      "code": "Article 33",
+      "title": "Notification of Personal Data Breach to Supervisory Authority",
+      "description": "In the event of a personal data breach, the organization must notify the relevant supervisory authority within 72 hours of becoming aware of it, unless the breach is unlikely to result in risk to individuals. The notification must describe the nature of the breach, the data affected, and the measures taken or planned in response. Breaches that fall below the notification threshold must still be documented internally."
+    },
+    {
+      "id": "gdpr-art35-1",
+      "framework": "GDPR",
+      "framework_id": "gdpr",
+      "domain": "Risk Assessment",
+      "code": "Article 35",
+      "title": "Data Protection Impact Assessment (DPIA)",
+      "description": "When a new processing activity is likely to result in a high risk to individuals' rights and freedoms, the organization must conduct a Data Protection Impact Assessment before processing begins. A DPIA identifies the risks associated with the processing and documents the measures taken to address them. It is mandatory for activities such as large-scale processing of sensitive data, systematic monitoring, or use of new technologies."
+    },
+    {
+      "id": "gdpr-art5-3",
+      "framework": "GDPR",
+      "framework_id": "gdpr",
+      "domain": "Data Principles",
+      "code": "Article 5(2)",
+      "title": "Accountability",
+      "description": "Organizations are not only required to comply with GDPR principles but must also be able to actively demonstrate that compliance. This means keeping records of processing activities, maintaining documentation of decisions made, and being able to show evidence of controls in place. Accountability is a core principle that underpins all other GDPR obligations."
+    }
+  ],
+
+  "mappings": [
+    {
+      "id": "map-001",
+      "source_id": "iso-a9-1",
+      "target_id": "soc2-cc6-1",
+      "type": "equivalent",
+      "score": 90,
+      "reasoning": "Both controls require a formal access control policy that governs how systems and data are protected from unauthorized access."
+    },
+    {
+      "id": "map-002",
+      "source_id": "iso-a9-1",
+      "target_id": "soc2-cc6-3",
+      "type": "partial",
+      "score": 70,
+      "reasoning": "ISO A.9.1 establishes the policy foundation while CC6.3 specifically implements least privilege, making CC6.3 a narrower subset of the same intent."
+    },
+    {
+      "id": "map-003",
+      "source_id": "iso-a9-1",
+      "target_id": "gdpr-art25-1",
+      "type": "partial",
+      "score": 60,
+      "reasoning": "ISO A.9.1 focuses on access policy for security, while GDPR Article 25 requires access restriction as part of privacy-by-design, sharing the principle but differing in regulatory context."
+    },
+    {
+      "id": "map-004",
+      "source_id": "iso-a9-2",
+      "target_id": "soc2-cc6-2",
+      "type": "equivalent",
+      "score": 95,
+      "reasoning": "Both controls directly govern the lifecycle of user access provisioning, modification, and revocation using a formal approval-based process."
+    },
+    {
+      "id": "map-005",
+      "source_id": "iso-a9-2",
+      "target_id": "soc2-cc6-3",
+      "type": "partial",
+      "score": 72,
+      "reasoning": "ISO A.9.2 covers the full access provisioning process while CC6.3 specifically enforces least privilege and role-based access as an output of that process."
+    },
+    {
+      "id": "map-006",
+      "source_id": "iso-a9-2",
+      "target_id": "gdpr-art5-2",
+      "type": "partial",
+      "score": 50,
+      "reasoning": "ISO A.9.2 manages user access to systems, while GDPR Article 5 data minimisation principle implies limiting access to personal data to only what is necessary."
+    },
+    {
+      "id": "map-007",
+      "source_id": "iso-a9-3",
+      "target_id": "soc2-cc6-5",
+      "type": "equivalent",
+      "score": 85,
+      "reasoning": "Both controls address user responsibility for protecting credentials and enforcing secure authentication practices across the organization."
+    },
+    {
+      "id": "map-008",
+      "source_id": "iso-a9-3",
+      "target_id": "soc2-cc6-1",
+      "type": "partial",
+      "score": 55,
+      "reasoning": "User responsibility for credentials in ISO A.9.3 supports the broader logical access security measures required by CC6.1, but CC6.1 has wider organizational scope."
+    },
+    {
+      "id": "map-009",
+      "source_id": "iso-a9-4",
+      "target_id": "soc2-cc6-1",
+      "type": "equivalent",
+      "score": 88,
+      "reasoning": "Both controls enforce technical restrictions on system and application access, including authentication procedures and session management."
+    },
+    {
+      "id": "map-010",
+      "source_id": "iso-a9-4",
+      "target_id": "soc2-cc6-6",
+      "type": "partial",
+      "score": 68,
+      "reasoning": "ISO A.9.4 covers access control at the system level broadly, while CC6.6 specifically addresses the restriction of access originating from external networks."
+    },
+    {
+      "id": "map-011",
+      "source_id": "iso-a9-4",
+      "target_id": "gdpr-art32-1",
+      "type": "partial",
+      "score": 62,
+      "reasoning": "ISO A.9.4 enforces system-level access controls which partially satisfy GDPR Article 32's requirement for appropriate technical measures to protect personal data."
+    },
+    {
+      "id": "map-012",
+      "source_id": "iso-a9-5",
+      "target_id": "soc2-cc6-3",
+      "type": "equivalent",
+      "score": 88,
+      "reasoning": "Both controls specifically target privileged and elevated access, requiring that such access be tightly restricted, logged, and limited to genuine need."
+    },
+    {
+      "id": "map-013",
+      "source_id": "iso-a9-5",
+      "target_id": "soc2-cc6-2",
+      "type": "partial",
+      "score": 65,
+      "reasoning": "Privileged access management in ISO A.9.5 is a specialized subset of the broader user access provisioning lifecycle covered by CC6.2."
+    },
+    {
+      "id": "map-014",
+      "source_id": "iso-a10-1",
+      "target_id": "soc2-cc6-5",
+      "type": "partial",
+      "score": 60,
+      "reasoning": "ISO A.10.1 governs cryptographic policy broadly, while CC6.5 focuses specifically on credential protection where cryptography is one relevant tool."
+    },
+    {
+      "id": "map-015",
+      "source_id": "iso-a10-1",
+      "target_id": "gdpr-art32-1",
+      "type": "equivalent",
+      "score": 85,
+      "reasoning": "GDPR Article 32 explicitly names encryption as an appropriate technical measure, directly aligning with ISO A.10.1's requirement for a cryptographic controls policy."
+    },
+    {
+      "id": "map-016",
+      "source_id": "iso-a10-1",
+      "target_id": "gdpr-art25-1",
+      "type": "partial",
+      "score": 58,
+      "reasoning": "Encryption as mandated by ISO A.10.1 supports GDPR Article 25's privacy-by-design requirement, particularly the default protection of personal data."
+    },
+    {
+      "id": "map-017",
+      "source_id": "iso-a10-2",
+      "target_id": "soc2-cc6-5",
+      "type": "partial",
+      "score": 65,
+      "reasoning": "ISO A.10.2 covers full key lifecycle management while CC6.5 addresses credential management more broadly, with encryption keys being one type of credential."
+    },
+    {
+      "id": "map-018",
+      "source_id": "iso-a10-2",
+      "target_id": "gdpr-art32-1",
+      "type": "partial",
+      "score": 70,
+      "reasoning": "Proper key management under ISO A.10.2 is essential to maintaining the integrity of encryption required by GDPR Article 32, but GDPR does not prescribe key management specifics."
+    },
+    {
+      "id": "map-019",
+      "source_id": "iso-a11-1",
+      "target_id": "soc2-cc6-4",
+      "type": "equivalent",
+      "score": 92,
+      "reasoning": "Both controls require defined physical security boundaries and authentication mechanisms to prevent unauthorized physical access to sensitive systems."
+    },
+    {
+      "id": "map-020",
+      "source_id": "iso-a11-1",
+      "target_id": "gdpr-art32-1",
+      "type": "partial",
+      "score": 55,
+      "reasoning": "Physical perimeter security under ISO A.11.1 contributes to the organizational security measures required by GDPR Article 32, though GDPR does not specifically mandate physical controls."
+    },
+    {
+      "id": "map-021",
+      "source_id": "iso-a11-2",
+      "target_id": "soc2-cc6-4",
+      "type": "equivalent",
+      "score": 90,
+      "reasoning": "Both controls require that physical access to sensitive areas be logged, monitored, and limited to authorized individuals with formal access rights."
+    },
+    {
+      "id": "map-022",
+      "source_id": "iso-a11-2",
+      "target_id": "soc2-cc6-2",
+      "type": "partial",
+      "score": 50,
+      "reasoning": "Physical access management in ISO A.11.2 mirrors the provisioning and revocation lifecycle in CC6.2 but applies to physical entry rights rather than logical system access."
+    },
+    {
+      "id": "map-023",
+      "source_id": "iso-a11-3",
+      "target_id": "soc2-cc6-4",
+      "type": "partial",
+      "score": 68,
+      "reasoning": "Equipment security in ISO A.11.3 overlaps with CC6.4's physical access controls for sensitive systems, but ISO A.11.3 extends to theft, environmental risk, and device placement."
+    },
+    {
+      "id": "map-024",
+      "source_id": "iso-a11-3",
+      "target_id": "gdpr-art32-1",
+      "type": "partial",
+      "score": 52,
+      "reasoning": "Protecting physical equipment that stores personal data under ISO A.11.3 partially satisfies GDPR Article 32's requirement for measures against accidental loss or destruction."
+    },
+    {
+      "id": "map-025",
+      "source_id": "iso-a11-4",
+      "target_id": "soc2-cc6-1",
+      "type": "partial",
+      "score": 48,
+      "reasoning": "Clear desk and screen policies in ISO A.11.4 support the broader access security intent of CC6.1 but represent a narrow physical behaviour control rather than a system-level measure."
+    },
+    {
+      "id": "map-026",
+      "source_id": "iso-a11-4",
+      "target_id": "gdpr-art32-1",
+      "type": "partial",
+      "score": 45,
+      "reasoning": "Clear screen and desk practices reduce the risk of unauthorized viewing of personal data, partially supporting GDPR Article 32's requirement for organizational protective measures."
+    },
+    {
+      "id": "map-027",
+      "source_id": "iso-a16-1",
+      "target_id": "soc2-cc7-3",
+      "type": "equivalent",
+      "score": 87,
+      "reasoning": "Both controls establish the organizational structure and defined responsibilities required to identify, classify, and respond to security incidents effectively."
+    },
+    {
+      "id": "map-028",
+      "source_id": "iso-a16-1",
+      "target_id": "soc2-cc7-4",
+      "type": "partial",
+      "score": 70,
+      "reasoning": "ISO A.16.1 defines the management framework for incidents while CC7.4 describes the response and containment activities that framework enables."
+    },
+    {
+      "id": "map-029",
+      "source_id": "iso-a16-1",
+      "target_id": "gdpr-art33-1",
+      "type": "partial",
+      "score": 62,
+      "reasoning": "Having defined incident management responsibilities under ISO A.16.1 is a prerequisite for meeting GDPR Article 33's 72-hour breach notification requirement."
+    },
+    {
+      "id": "map-030",
+      "source_id": "iso-a16-2",
+      "target_id": "soc2-cc7-3",
+      "type": "equivalent",
+      "score": 83,
+      "reasoning": "Both controls require that security events be detected and reported promptly through established channels so they can be assessed and classified."
+    },
+    {
+      "id": "map-031",
+      "source_id": "iso-a16-2",
+      "target_id": "gdpr-art33-1",
+      "type": "partial",
+      "score": 68,
+      "reasoning": "ISO A.16.2 requires fast internal reporting of security events, which directly supports GDPR Article 33's obligation to notify authorities within 72 hours of a breach."
+    },
+    {
+      "id": "map-032",
+      "source_id": "iso-a16-3",
+      "target_id": "soc2-cc7-4",
+      "type": "equivalent",
+      "score": 92,
+      "reasoning": "Both controls describe the full incident response lifecycle: containment, investigation, remediation, and post-incident review following a confirmed security event."
+    },
+    {
+      "id": "map-033",
+      "source_id": "iso-a16-3",
+      "target_id": "soc2-cc7-5",
+      "type": "equivalent",
+      "score": 85,
+      "reasoning": "ISO A.16.3's requirement for post-incident review and lessons learned directly corresponds to CC7.5's requirement for post-incident analysis and disclosure obligations."
+    },
+    {
+      "id": "map-034",
+      "source_id": "iso-a16-3",
+      "target_id": "gdpr-art33-1",
+      "type": "partial",
+      "score": 72,
+      "reasoning": "Structured incident response and recovery under ISO A.16.3 supports GDPR Article 33 compliance by ensuring breaches are properly handled and documented before notification."
+    },
+    {
+      "id": "map-035",
+      "source_id": "iso-a16-4",
+      "target_id": "soc2-cc7-4",
+      "type": "partial",
+      "score": 65,
+      "reasoning": "Evidence collection and preservation under ISO A.16.4 supports the investigation phase of CC7.4's incident response process but is not explicitly required by SOC 2."
+    },
+    {
+      "id": "map-036",
+      "source_id": "iso-a16-4",
+      "target_id": "gdpr-art33-1",
+      "type": "partial",
+      "score": 60,
+      "reasoning": "Preserving evidence under ISO A.16.4 helps organizations accurately document the nature and scope of a breach as required when notifying authorities under GDPR Article 33."
+    },
+    {
+      "id": "map-037",
+      "source_id": "iso-a15-1",
+      "target_id": "soc2-cc9-2",
+      "type": "equivalent",
+      "score": 91,
+      "reasoning": "Both controls require that third-party and vendor risks be assessed before engagement and that security requirements be formally established as part of onboarding."
+    },
+    {
+      "id": "map-038",
+      "source_id": "iso-a15-1",
+      "target_id": "gdpr-art25-1",
+      "type": "partial",
+      "score": 55,
+      "reasoning": "ISO A.15.1 governs supplier security requirements broadly, which partially overlaps with GDPR Article 25's requirement that data protection obligations flow to processors by design."
+    },
+    {
+      "id": "map-039",
+      "source_id": "iso-a15-2",
+      "target_id": "soc2-cc9-2",
+      "type": "equivalent",
+      "score": 88,
+      "reasoning": "Both controls require that security obligations with third parties be formally documented in contracts, covering data handling, confidentiality, and security expectations."
+    },
+    {
+      "id": "map-040",
+      "source_id": "iso-a15-2",
+      "target_id": "gdpr-art6-1",
+      "type": "partial",
+      "score": 50,
+      "reasoning": "Supplier agreements under ISO A.15.2 that involve personal data processing must align with GDPR Article 6's requirement for a lawful basis, making them partially connected."
+    },
+    {
+      "id": "map-041",
+      "source_id": "iso-a15-3",
+      "target_id": "soc2-cc9-2",
+      "type": "partial",
+      "score": 75,
+      "reasoning": "ISO A.15.3 requires ongoing monitoring of supplier security performance, which extends CC9.2's vendor risk management beyond initial assessment into continuous oversight."
+    },
+    {
+      "id": "map-042",
+      "source_id": "iso-a15-3",
+      "target_id": "soc2-cc7-2",
+      "type": "partial",
+      "score": 45,
+      "reasoning": "Monitoring supplier security posture under ISO A.15.3 shares intent with CC7.2's anomaly monitoring, but CC7.2 focuses on internal system monitoring rather than vendor oversight."
+    },
+    {
+      "id": "map-043",
+      "source_id": "iso-a15-4",
+      "target_id": "soc2-cc9-2",
+      "type": "partial",
+      "score": 68,
+      "reasoning": "Managing changes in supplier services under ISO A.15.4 is a component of the broader vendor risk lifecycle described in CC9.2 but focuses specifically on change impact evaluation."
+    },
+    {
+      "id": "map-044",
+      "source_id": "iso-a15-4",
+      "target_id": "soc2-cc9-1",
+      "type": "partial",
+      "score": 55,
+      "reasoning": "Evaluating security impact of supplier changes aligns with CC9.1's requirement to identify and assess risks as the organizational or technological context evolves."
+    },
+    {
+      "id": "map-045",
+      "source_id": "iso-a15-5",
+      "target_id": "soc2-cc9-2",
+      "type": "partial",
+      "score": 72,
+      "reasoning": "Supply chain risk in ISO A.15.5 extends CC9.2's vendor risk management to cover sub-contractors and fourth parties, which SOC 2 addresses less explicitly."
+    },
+    {
+      "id": "map-046",
+      "source_id": "iso-a15-5",
+      "target_id": "gdpr-art25-1",
+      "type": "partial",
+      "score": 48,
+      "reasoning": "Ensuring data protection obligations flow through the supply chain under ISO A.15.5 partially supports GDPR Article 25's privacy-by-design requirement at the processor level."
+    }
+  ]
+}
