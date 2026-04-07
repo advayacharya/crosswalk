@@ -1,40 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
-/* ── Custom Theme ── */
+/* ── Sovereign Ledger Theme ── */
 @theme {
-  --color-navy: #1e2a4a;
-  --color-navy-light: #2a3a5c;
-  --color-navy-dark: #151e36;
-  --color-equivalent: #16a34a;
-  --color-equivalent-light: #dcfce7;
-  --color-partial: #d97706;
-  --color-partial-light: #fef3c7;
-  --color-gap: #dc2626;
-  --color-gap-light: #fee2e2;
-  --color-iso: #3b82f6;
-  --color-iso-light: #dbeafe;
-  --color-soc2: #8b5cf6;
-  --color-soc2-light: #ede9fe;
-  --color-gdpr: #16a34a;
-  --color-gdpr-light: #dcfce7;
-  --color-surface: #f8fafc;
-  --color-border: #e2e8f0;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #2563a8;
+  --color-primary-light: #eaf1fb;
+  --color-on-primary: #ffffff;
+  
+  --color-obsidian: #161b2a;
+  --color-steel: #575e6d;
+  --color-stone: #faf8ff;
+  --color-stone-low: #f2f3ff;
+  --color-stone-high: #eaedff;
+  
+  --color-equivalent: #2d7d4e;
+  --color-equivalent-bg: #edf7f1;
+  --color-partial: #9a6b1a;
+  --color-partial-bg: #fdf6e3;
+  --color-gap: #b53a3a;
+  --color-gap-bg: #fdf0f0;
+
+  --color-iso: #1a4fa8;
+  --color-iso-bg: #deeafb;
+  --color-soc2: #2d5a6e;
+  --color-soc2-bg: #ddf0f7;
+  --color-gdpr: #2d6e45;
+  --color-gdpr-bg: #ddf0e8;
+
+  --font-plus: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "DM Mono", monospace;
+  
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
 }
 
 /* ── Base Styles ── */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: var(--font-sans);
-  background-color: #ffffff;
-  color: #1e293b;
+  font-family: var(--font-plus);
+  background-color: var(--color-stone);
+  color: var(--color-obsidian);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Technical Identifier Style ── */
+.tech-id {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  letter-spacing: -0.01em;
+}
+
+/* ── Architectural Layering (No Borders) ── */
+.surface-base {
+  background-color: var(--color-stone);
+}
+
+.surface-low {
+  background-color: var(--color-stone-low);
+}
+
+.surface-high {
+  background-color: var(--color-stone-high);
+}
+
+/* ── The Ghost Border ── */
+.ghost-border {
+  border: 1px solid rgba(194, 198, 210, 0.2);
+}
+
+.interactive-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.interactive-card:hover {
+  border-color: var(--color-primary);
+}
+
+/* ── Buttons (The Seal) ── */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.875rem;
 }
 
 /* ── Scrollbar ── */
@@ -43,14 +111,12 @@ body {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: var(--color-stone-low);
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: var(--color-steel);
+  opacity: 0.3;
   border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
 }
 
 /* ── Animations ── */
@@ -59,71 +125,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 .animate-fade-in {
   animation: fadeIn 0.3s ease-out forwards;
-}
-
-.animate-slide-up {
-  animation: slideUp 0.4s ease-out forwards;
-}
-
-/* ── Card Hover ── */
-.card-hover {
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-.card-hover:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
-}
-
-/* ── Table ── */
-.mapping-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-.mapping-table th {
-  text-align: left;
-  padding: 12px 16px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #64748b;
-  background-color: #f8fafc;
-  border-bottom: 2px solid #e2e8f0;
-}
-.mapping-table td {
-  padding: 12px 16px;
-  font-size: 0.875rem;
-  border-bottom: 1px solid #f1f5f9;
-  vertical-align: top;
-}
-.mapping-table tbody tr {
-  cursor: pointer;
-  transition: background-color 0.15s ease;
-}
-.mapping-table tbody tr:hover {
-  background-color: #f8fafc;
-}
-
-/* ── Score Inline Bar ── */
-.score-bar-bg {
-  width: 60px;
-  height: 6px;
-  background-color: #e2e8f0;
-  border-radius: 3px;
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 6px;
-}
-.score-bar-fill {
-  height: 100%;
-  border-radius: 3px;
-  transition: width 0.4s ease;
 }

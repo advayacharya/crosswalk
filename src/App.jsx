@@ -7,10 +7,14 @@ import About from './pages/About';
 
 function Footer() {
   return (
-    <footer className="border-t border-border bg-surface">
-      <div className="max-w-7xl mx-auto px-4 py-5 text-center">
-        <p className="text-xs text-gray-400">
-          Built for portfolio purposes. Data is simplified and not sourced from official framework publications.
+    <footer className="surface-low border-t border-stone-high py-12 px-6">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="text-steel font-bold text-xs uppercase tracking-widest flex items-center gap-2">
+          <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+          Sovereign Ledger v1.0.0
+        </div>
+        <p className="text-[10px] text-steel font-medium max-w-sm text-center md:text-right italic">
+          Portfolio asset. Data is architecturally derived for demonstration purposes. Not sourced from official publications.
         </p>
       </div>
     </footer>

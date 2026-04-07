@@ -14,8 +14,8 @@ export default function MappingGraph({ controlId, mappings }) {
       {
         id: centerControl.id,
         label: centerControl.code,
-        fill: '#1e2a4a',
-        size: 12,
+        fill: '#2563a8', // Steel Blue
+        size: 15,
       },
     ];
 
@@ -32,7 +32,7 @@ export default function MappingGraph({ controlId, mappings }) {
           id: relatedControl.id,
           label: relatedControl.code,
           fill: typeColor.fill,
-          size: 8,
+          size: 10,
         });
         addedNodes.add(relatedControl.id);
       }
@@ -60,7 +60,7 @@ export default function MappingGraph({ controlId, mappings }) {
   if (nodes.length === 0) return null;
 
   return (
-    <div className="w-full h-[500px] rounded-xl border border-border bg-white overflow-hidden">
+    <div className="w-full h-[600px] ghost-border rounded-xl bg-white overflow-hidden shadow-sm">
       <GraphCanvas
         nodes={nodes}
         edges={edges}
@@ -74,23 +74,23 @@ export default function MappingGraph({ controlId, mappings }) {
           canvas: { background: '#ffffff' },
           node: {
             ...lightTheme.node,
-            fill: '#1e2a4a',
-            activeFill: '#2a3a5c',
+            fill: '#2563a8',
+            activeFill: '#004b8b',
             label: {
               ...lightTheme.node.label,
-              color: '#1e293b',
-              activeColor: '#1e2a4a',
-              fontSize: 10,
+              color: '#161b2a',
+              activeColor: '#2563a8',
+              fontSize: 12,
             },
           },
           edge: {
             ...lightTheme.edge,
-            fill: '#cbd5e1',
-            activeFill: '#94a3b8',
+            fill: 'rgba(194, 198, 210, 0.4)',
+            activeFill: '#2563a8',
             label: {
               ...lightTheme.edge.label,
-              color: '#94a3b8',
-              fontSize: 8,
+              color: '#575e6d',
+              fontSize: 9,
             },
           },
         }}

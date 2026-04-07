@@ -144,18 +144,18 @@ export function searchControls(query, activeFrameworks) {
 
 export function getFrameworkColor(frameworkId) {
   const map = {
-    iso27001: { bg: 'bg-iso-light', text: 'text-iso', border: 'border-iso' },
-    soc2: { bg: 'bg-soc2-light', text: 'text-soc2', border: 'border-soc2' },
-    gdpr: { bg: 'bg-gdpr-light', text: 'text-gdpr', border: 'border-gdpr' },
+    iso27001: { bg: 'bg-iso-bg', text: 'text-iso', border: 'border-iso' },
+    soc2: { bg: 'bg-soc2-bg', text: 'text-soc2', border: 'border-soc2' },
+    gdpr: { bg: 'bg-gdpr-bg', text: 'text-gdpr', border: 'border-gdpr' },
   };
-  return map[frameworkId] || { bg: 'bg-gray-100', text: 'text-gray-600', border: 'border-gray-300' };
+  return map[frameworkId] || { bg: 'bg-stone-low', text: 'text-steel', border: 'border-stone-high' };
 }
 
 export function getMappingTypeColor(type) {
   const map = {
-    equivalent: { bg: 'bg-equivalent-light', text: 'text-equivalent', fill: '#16a34a' },
-    partial: { bg: 'bg-partial-light', text: 'text-partial', fill: '#d97706' },
-    gap: { bg: 'bg-gap-light', text: 'text-gap', fill: '#dc2626' },
+    equivalent: { bg: 'bg-equivalent-bg', text: 'text-equivalent', fill: '#2d7d4e' },
+    partial: { bg: 'bg-partial-bg', text: 'text-partial', fill: '#9a6b1a' },
+    gap: { bg: 'bg-gap-bg', text: 'text-gap', fill: '#b53a3a' },
   };
-  return map[type] || { bg: 'bg-gray-100', text: 'text-gray-600', fill: '#94a3b8' };
+  return map[type] || { bg: 'bg-stone-low', text: 'text-steel', fill: '#575e6d' };
 }

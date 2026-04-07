@@ -7,25 +7,29 @@ export default function ControlCard({ control }) {
   return (
     <div
       onClick={() => navigate(`/control/${control.id}`)}
-      className="bg-white border border-border rounded-xl p-5 cursor-pointer card-hover animate-fade-in"
+      className="interactive-card ghost-border p-6 cursor-pointer animate-fade-in group"
       role="button"
       tabIndex={0}
       onKeyDown={(e) => e.key === 'Enter' && navigate(`/control/${control.id}`)}
     >
-      <div className="flex items-start justify-between mb-3">
-        <span className="text-base font-bold text-navy">{control.code}</span>
+      <div className="flex items-start justify-between mb-4">
+        <span className="tech-id font-medium text-primary bg-primary-light px-2 py-0.5 rounded uppercase">
+          {control.code}
+        </span>
         <FrameworkBadge frameworkId={control.framework_id} frameworkName={control.framework} />
       </div>
 
-      <h3 className="text-sm font-semibold text-gray-900 mb-1.5 leading-snug">
+      <h3 className="text-base font-bold text-obsidian mb-2 leading-tight group-hover:text-primary transition-colors">
         {control.title}
       </h3>
 
-      <span className="inline-block text-xs text-gray-400 font-medium mb-2">
-        {control.domain}
-      </span>
+      <div className="mb-4">
+        <span className="text-[10px] text-steel font-bold uppercase tracking-widest bg-stone-low px-2 py-1 rounded">
+          {control.domain}
+        </span>
+      </div>
 
-      <p className="text-xs text-gray-500 leading-relaxed line-clamp-2">
+      <p className="text-sm text-steel leading-relaxed line-clamp-3">
         {control.description}
       </p>
     </div>

@@ -1,42 +1,48 @@
 export default function About() {
   return (
-    <div className="min-h-screen bg-white">
-      <section className="bg-surface border-b border-border">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <h1 className="text-2xl sm:text-3xl font-bold text-navy mb-2">
-            About This Project
+    <div className="min-h-screen surface-base">
+      <section className="surface-low border-b border-stone-high py-16 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-black text-obsidian tracking-tighter">
+            Architectural <span className="text-primary italic">Statement.</span>
           </h1>
         </div>
       </section>
 
-      <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
-        <div className="bg-white border border-border rounded-xl p-6 sm:p-8 shadow-sm">
-          <p className="text-gray-600 leading-relaxed text-base">
-            The Control Mapping Engine is a portfolio project that demonstrates how
-            security controls from different compliance frameworks — specifically
-            ISO 27001, SOC 2, and GDPR — can be cross-referenced and compared.
-            In real-world governance, risk, and compliance (GRC) work, organizations
-            often need to comply with multiple frameworks simultaneously. This tool
-            provides a simplified, interactive way to explore the relationships between
-            controls across these frameworks, showing equivalent, partial, and gap
-            mappings with reasoning and confidence scores. All data in this tool is
-            developer-created and simplified for educational and demonstration purposes.
-            It is not sourced from or endorsed by official framework publishers.
-          </p>
+      <section className="max-w-4xl mx-auto px-6 py-16 animate-fade-in">
+        <div className="bg-white ghost-border rounded-3xl p-10 sm:p-16 shadow-sm shadow-obsidian/5 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 -mr-32 -mt-32 rounded-full blur-3xl"></div>
+          
+          <div className="relative z-10">
+            <h2 className="text-xs font-bold text-primary uppercase tracking-[0.3em] mb-8">Purpose & Vision</h2>
+            <p className="text-obsidian text-xl font-medium leading-relaxed mb-8">
+              The Sovereign Crosswalk is a high-precision registry designed to harmonize the fragmented landscape of global security compliance. 
+            </p>
+            <p className="text-steel text-lg font-medium leading-relaxed mb-10">
+              In an era of regulatory proliferation, organizations often find themselves struggling with overlapping requirements from ISO 27001, SOC 2, and GDPR. This engine provides a forensic-grade interface to map these framework architectures—identifying structural equivalencies, partial alignments, and critical gaps with institutional clarity.
+            </p>
+            
+            <div className="border-t border-stone-low pt-10">
+              <h3 className="text-xs font-bold text-steel uppercase tracking-widest mb-4">Disclaimer & Methodology</h3>
+              <p className="text-steel text-sm font-medium leading-relaxed italic">
+                "All data in this ledger is conceptually derived and simplified for architectural demonstration. This tool is a portfolio asset and does not constitute official certification advice or legal council. No data has been directly sourced from official publication texts; mappings are based on public study materials."
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="bg-white border border-border rounded-xl p-5 text-center">
-            <span className="text-2xl font-bold text-navy">3</span>
-            <p className="text-xs text-gray-400 mt-1">Frameworks</p>
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="bg-white ghost-border rounded-2xl p-8 text-center shadow-sm">
+            <span className="text-4xl font-black text-obsidian block mb-2 tracking-tighter">03</span>
+            <p className="text-[10px] font-bold text-steel uppercase tracking-widest">Registries</p>
           </div>
-          <div className="bg-white border border-border rounded-xl p-5 text-center">
-            <span className="text-2xl font-bold text-navy">45</span>
-            <p className="text-xs text-gray-400 mt-1">Controls</p>
+          <div className="bg-white ghost-border rounded-2xl p-8 text-center shadow-sm">
+            <span className="text-4xl font-black text-obsidian block mb-2 tracking-tighter">45</span>
+            <p className="text-[10px] font-bold text-steel uppercase tracking-widest">Identified Controls</p>
           </div>
-          <div className="bg-white border border-border rounded-xl p-5 text-center">
-            <span className="text-2xl font-bold text-navy">46</span>
-            <p className="text-xs text-gray-400 mt-1">Mappings</p>
+          <div className="bg-white ghost-border rounded-2xl p-8 text-center shadow-sm">
+            <span className="text-4xl font-black text-obsidian block mb-2 tracking-tighter">46</span>
+            <p className="text-[10px] font-bold text-steel uppercase tracking-widest">Logical Mappings</p>
           </div>
         </div>
       </section>
